@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="620.0" maxWidth="1040.0" prefHeight="620.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wxs.org.login.MainWindow">
+<center>
+   <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+      <children>
+            <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pannable="true" prefHeight="496.0" vbarPolicy="ALWAYS" vmin="1.0" vvalue="1.0" VBox.vgrow="ALWAYS">
+               <content>
+                   <ListView id="speed" fx:id="chatPaneListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../rsc/css/ListViewStyle.css" />
+               </content>
+            </ScrollPane>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="100.0" VBox.vgrow="NEVER">
+               <children>
+                     <TextArea fx:id="messageBoxTextArea" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="100.0" nodeOrientation="LEFT_TO_RIGHT" onKeyPressed="#sendMethod" prefHeight="100.0" prefWidth="698.0" promptText="Enter Message..." scaleShape="false" HBox.hgrow="ALWAYS">
+                        <font>
+                           <Font name="Arial" size="18.0" />
+                        </font>
+                     </TextArea>
+                  <Button fx:id="sendButton1" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#sendBtnAction" onMousePressed="#send" prefHeight="48.0" prefWidth="100.0" scaleShape="false" text="Send" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                     <Button fx:id="sendButton" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#sendBtnAction" onMousePressed="#transfer" prefHeight="48.0" prefWidth="100.0" scaleShape="false" text="transfer" textAlignment="CENTER" HBox.hgrow="NEVER">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                  </Button>
+               </children>
+   
+            </HBox>
+      </children>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <cursor>
+         <Cursor fx:constant="DEFAULT" />
+      </cursor>
+   </VBox>
+</center>
+<left>
+   <VBox maxHeight="1.7976931348623157E308" BorderPane.alignment="CENTER">
+      <children>
+            <HBox fx:id="onlineUsersHbox" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="217.0" stylesheets="@../../rsc/css/ListViewStyle.css">
+               <children>
+                     <Label prefHeight="50.0" prefWidth="124.0" text="Online Users:" textAlignment="CENTER" textFill="#fc6747">
+                        <font>
+                           <Font name="SansSerif Regular" size="18.0" />
+                        </font>
+                        <padding>
+                           <Insets left="10.0" />
+                        </padding>
+                        <opaqueInsets>
+                           <Insets bottom="10.0" />
+                        </opaqueInsets>
+                     </Label>
+                     <Label fx:id="onlineuserCountLabel" alignment="CENTER" prefHeight="48.0" prefWidth="94.0" text="0" textFill="#fc6747">
+                        <opaqueInsets>
+                           <Insets />
+                        </opaqueInsets>
+                        <font>
+                           <Font name="SansSerif Regular" size="18.0" />
+                        </font>
+                     </Label>
+               </children>
+            </HBox>
+            <ListView fx:id="onlineuserListView" focusTraversable="false" maxHeight="1.7976931348623157E308" onMousePressed="#online" prefHeight="495.0" prefWidth="217.0" style="-fx-border-image-width: 0;">
+         </ListView>
+            <VBox maxHeight="1.7976931348623157E308">
+               <children>
+                  <HBox fx:id="offlineUsersHbox1" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="217.0" stylesheets="@../../rsc/css/ListViewStyle.css">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="124.0" text="Offline Users:" textAlignment="CENTER" textFill="#fc6747">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets bottom="10.0" />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="offlineuserCountLabel" alignment="CENTER" prefHeight="48.0" prefWidth="94.0" text="0" textFill="#fc6747">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ListView fx:id="offlineuserListView" focusTraversable="false" maxHeight="1.7976931348623157E308" onMousePressed="#offline" prefHeight="495.0" prefWidth="217.0" style="-fx-border-image-width: 0;" />
+               </children>
+            </VBox>
+      </children>
+   </VBox>
+</left>
+<top>
+   <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #031c30;" BorderPane.alignment="CENTER">
+      <right>
+         <HBox prefHeight="76.0" prefWidth="123.0" stylesheets="@../../rsc/css/ButtonStyle.css" BorderPane.alignment="CENTER">
+            <children>
+                  <Label fx:id="speed" prefHeight="57.0" prefWidth="48.0" style="-fx-background-color: #ffffff;" textAlignment="CENTER" textFill="#1e1c1c" translateY="10.0" />
+                  <ImageView fitHeight="23.0" fitWidth="30.0" onMousePressed="#refreshImgViewPressedAction" pickOnBounds="true" preserveRatio="true" styleClass="button" translateX="30.0">
+                     <image>
+                           <Image url="@../../res/images/refresh.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="30.0" top="30.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+            </children>
+         </HBox>
+      </right>
+      <left>
+         <HBox prefWidth="259.0" BorderPane.alignment="CENTER">
+            <children>
+                  <ImageView fx:id="userImageView" fitHeight="69.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                           <Image url="@../../res/images/default.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox>
+                     <HBox.margin>
+                        <Insets left="10.0" top="30.0" />
+                     </HBox.margin>
+                     <children>
+                           <Label fx:id="usernameLabel" text="unknown" textFill="#fa6648">
+                              <font>
+                                 <Font size="24.0" />
+                              </font>
+                           </Label>
+                     </children>
+                  </VBox>
+            </children>
+         </HBox>
+      </left>
+      <center>
+         <Label fx:id="otherUserNameLabel" prefHeight="76.0" prefWidth="385.0" text="Welcome" textFill="#bfbfbf" BorderPane.alignment="CENTER">
+            <font>
+               <Font name="Arial Bold" size="36.0" />
+            </font>
+         </Label>
+      </center>
+   </BorderPane>
+</top>
+<rotationAxis>
+   <Point3D />
+</rotationAxis>
+</BorderPane>

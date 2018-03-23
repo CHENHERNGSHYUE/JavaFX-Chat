@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="528.0" prefWidth="414.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wxs.org.Server.serverController">
+   <children>
+      <Label contentDisplay="CENTER" layoutX="64.0" layoutY="14.0" prefHeight="28.0" prefWidth="265.0" style="-fx-background-color: #2196f3;" text="       Online User" textAlignment="CENTER" textFill="#fdfffd" textOverrun="CLIP">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="254.0" prefHeight="37.0" prefWidth="265.0" style="-fx-background-color: #2196f3;" text="       Offline User" textFill="#fff9f9">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Button id="update" layoutX="345.0" layoutY="20.0" mnemonicParsing="false" onMousePressed="#update" text="刷新" />
+      <ListView fx:id="onlineUserId" layoutX="64.0" layoutY="77.0" prefHeight="171.0" prefWidth="80.0" />
+      <ListView fx:id="onlineIp" layoutX="141.0" layoutY="77.0" prefHeight="171.0" prefWidth="129.0" />
+      <ListView fx:id="onlinePort" layoutX="270.0" layoutY="77.0" prefHeight="171.0" prefWidth="60.0" />
+      <Label layoutX="67.0" layoutY="50.0" prefHeight="23.0" prefWidth="74.0" text="   UserId" />
+      <Label layoutX="141.0" layoutY="50.0" prefHeight="23.0" prefWidth="129.0" text="             IP" textAlignment="CENTER" />
+      <Label layoutX="64.0" layoutY="291.0" prefHeight="37.0" prefWidth="265.0" text="                      UserId" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="274.0" layoutY="50.0" prefHeight="23.0" prefWidth="53.0" text="Port" />
+      <ListView fx:id="offline" layoutX="67.0" layoutY="328.0" prefHeight="186.0" prefWidth="265.0" />
+   </children>
+</AnchorPane>

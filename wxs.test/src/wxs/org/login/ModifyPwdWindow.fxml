@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="borderPane" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wxs.org.login.ModifyWindow">
+      <StackPane layoutX="184.0" layoutY="100.0" prefHeight="550.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+          <VBox prefHeight="200.0" prefWidth="100.0">
+              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2196f3;" />
+              <Pane prefHeight="351.0" prefWidth="800.0" style="-fx-background-color: #EDE7F6;" />
+          </VBox>
+
+            <AnchorPane prefHeight="486.0" prefWidth="800.0" style="-fx-background-color: transparent;">
+                  <AnchorPane layoutX="166.0" layoutY="113.0" prefHeight="342.0" prefWidth="469.0" style="-fx-background-color: WHITE; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4; -fx-border-radius: 4; -fx-padding: 8;">
+
+                        <JFXTextField fx:id = "userID" labelFloat="true" layoutX="75.0" layoutY="47.0" maxWidth="316.0" minWidth="233.0" prefHeight="31.0" prefWidth="316.0">
+                           <font>
+                              <Font name="Roboto Medium" size="14.0" />
+                           </font>
+                            <promptText>
+                                username
+                            </promptText>
+                        </JFXTextField>
+                        
+                        
+ 						<JFXTextField fx:id = "question" labelFloat="true" layoutX="75.0" layoutY="95.0" maxWidth="316.0" minWidth="233.0" prefHeight="31.0" prefWidth="316.0">
+                           <font>
+                              <Font name="Roboto Medium" size="14.0" />
+                           </font>
+                            <promptText>
+                                question
+                            </promptText>
+                        </JFXTextField>
+                        
+                        <JFXTextField fx:id = "answer" labelFloat="true" layoutX="75.0" layoutY="155.0" maxWidth="316.0" minWidth="233.0" prefHeight="31.0" prefWidth="316.0">
+                           <font>
+                              <Font name="Roboto Medium" size="14.0" />
+                           </font>
+                            <promptText>
+                                answer
+                            </promptText>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id = "password" labelFloat="true" layoutX="75.0" layoutY="195.0" maxWidth="316.0" minWidth="235.0" prefHeight="31.0" prefWidth="316.0">
+                           <font>
+                              <Font name="Roboto Medium" size="14.0" />
+                           </font>
+                            <promptText>
+                                password
+                            </promptText>
+                        </JFXPasswordField>
+                        
+                        <JFXButton layoutX="70.0" fx:id = "showButton" onMousePressed="#show" layoutY="243.0" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #2196f3;" textFill="WHITE">
+                            <text>
+                                show
+                            </text>
+                        </JFXButton>
+                        
+                        <JFXButton layoutX="180.0" fx:id = "ModifyButton" onMousePressed="#Modify" layoutY="243.0" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #2196f3;" textFill="WHITE">
+                            <text>
+                                Modify
+                            </text>
+                        </JFXButton>
+                      <JFXButton layoutX="290.0" fx:id = "backButton" onMousePressed="#Back" layoutY="243.0" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #2196f3;" textFill="WHITE">
+                            <text>
+                                back
+                            </text>
+                        </JFXButton>
+                  </AnchorPane>
+
+                  <VBox layoutX="188.0" layoutY="24.0">
+                        <Label fx:id = "theme" alignment="CENTER" prefHeight="34.0" prefWidth="425.0" text="" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" fx:id = "notification" prefHeight="32.0" prefWidth="425.0"  textAlignment="CENTER" textFill="#800d20">
+                           <font>
+                              <Font name="Roboto Bold" size="14.0" />
+                           </font>
+                        </Label>
+                  </VBox>
+            </AnchorPane>
+      </StackPane>
+</AnchorPane>
