@@ -46,11 +46,11 @@
 
   + Sender FSM
 
-  ![Sender FSM](./src/senderFSM.png)
+  ![Sender FSM](https://github.com/jiangchengyike/JavaFX-Chat/blob/master/src/senderFSM.PNG?raw=true)
 
   + Receiver FSM
 
-  ![receiver FSM](./src/receiverFSM.png)
+  ![receiver FSM](https://github.com/jiangchengyike/JavaFX-Chat/blob/master/src/receiverFSM.PNG?raw=true)
 
   ![Client Calling Graph](./src/clientCallingGraph.png)
 
